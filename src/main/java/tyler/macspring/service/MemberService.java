@@ -2,6 +2,7 @@ package tyler.macspring.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import tyler.macspring.domain.Member;
 import tyler.macspring.repository.MemberRepository;
 import tyler.macspring.repository.MemoryMemberRepository;
@@ -10,6 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 // @Service //Spring이 컨테이너에 등록
+@Transactional
 public class MemberService {
 
     private final MemberRepository memberRepository;
